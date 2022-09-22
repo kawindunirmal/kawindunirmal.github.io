@@ -5,36 +5,57 @@ body {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.container {
-  width: 100%;
-  display: inline-block;
-  margin: 0 auto;
-  transition: width 0.1s;
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  /* width: 100%; */
 }
-
-@media (min-width: 640px) {
-  .container {
-    width: 640px;
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+    max-width: 540px;
   }
 }
 @media (min-width: 768px) {
-  .container {
-    width: 768px;
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 720px;
   }
 }
-@media (min-width: 1024px) {
-  .container {
-    width: 1024px;
+@media (min-width: 992px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
   }
 }
-@media (min-width: 1280px) {
-  .container {
-    width: 1280px;
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
   }
 }
-@media (min-width: 1536px) {
-  .container {
-    width: 1536px;
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1320px;
   }
 }
 
@@ -66,6 +87,22 @@ body {
   text-align: center;
 }
 
+@media (min-width: 320px) and (max-width: 1024px) {
+  .kawindu-mw h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .swiper {
+    width: 175px !important;
+    height: 270px !important;
+  }
+  .star5-image {
+    width: 120px !important;
+    margin: 0 auto;
+  }
+}
+
 .kawindu-mw p {
   text-align: center;
   margin-top: -30px;
@@ -83,6 +120,16 @@ body {
 }
 .my-social ul li {
   padding: 10px;
+  background: #00b2a5;
+  border-radius: 2px;
+  margin-right: 3px;
+  width: 20px;
+  height: 25px;
+}
+
+.my-social ul li a {
+  color: #fff !important;
+  font-size: 20px;
 }
 
 .kawindu-logo {
@@ -127,7 +174,23 @@ body {
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.header-title::after {
+  content: "";
+  display: block;
+  border: 1px solid #00b2a5;
+  width: 115px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.skillbar-percent {
+  color: #000 !important;
+}
+
+.skillbar-bar {
+  border-radius: 0 !important;
 }

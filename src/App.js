@@ -1,16 +1,12 @@
 import "./kawindu.css";
-import {
-  BsFacebook,
-  BsInstagram,
-  BsGithub,
-  BsPinterest,
-  BsWhatsapp,
-  BsTwitter,
-} from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsGithub, BsWhatsapp } from "react-icons/bs";
 
 import { IoCallSharp } from "react-icons/io5";
 import Portfolio from "./components/portfolios/Portfolio";
 import { useEffect, useState } from "react";
+import Swipr from "./components/swiper/Swiper";
+import Skill from "./components/skill/SkillBar";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [scroll, setScroll] = useState(false);
@@ -43,57 +39,64 @@ function App() {
             <div className="my-social">
               <ul>
                 <li>
-                  <IoCallSharp />
+                  <a href="tel:+94750693658">
+                    <IoCallSharp />
+                  </a>
                 </li>
                 <li>
-                  <BsFacebook />
+                  <a
+                    href="https://www.facebook.com/kawindu12"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <BsFacebook />
+                  </a>
                 </li>
                 <li>
-                  <BsInstagram />
+                  <a
+                    href="https://www.instagram.com/kawindu.me/"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <BsInstagram />
+                  </a>
                 </li>
                 <li>
-                  <BsGithub />
+                  <a
+                    href="https://github.com/kawindunirmal"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <BsGithub />
+                  </a>
                 </li>
                 <li>
-                  <BsWhatsapp />
-                </li>
-                <li>
-                  <BsPinterest />
-                </li>
-                <li>
-                  <BsTwitter />
+                  <a
+                    href="https://wa.me/94750693658"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    <BsWhatsapp />
+                  </a>
                 </li>
               </ul>
             </div>
-            <div className="kawindu-portfolio">
-              <h1>Portfolio</h1>
+            <div className="container kawindu-portfolio">
+              <h1 className="header-title">Portfolio</h1>
               <Portfolio />
             </div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-            voluptatum laborum numquam blanditiis harum quisquam eius sed odit
-            fugiat iusto fuga praesentium optio, eaque rerum! Provident
-            similique accusantium nemo autem. Veritatis obcaecati tenetur iure
-            eius earum ut molestias architecto voluptate aliquam nihil, eveniet
-            aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur
-            error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-            quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias
-            eos sapiente officiis modi at sunt excepturi expedita sint? Sed
-            quibusdam recusandae alias error harum maxime adipisci amet laborum.
-            Perspiciatis minima nesciunt dolorem! Officiis iure rerum voluptates
-            a cumque velit quibusdam sed amet tempora. Sit laborum ab, eius
-            fugit doloribus tenetur fugiat, temporibus enim commodi iusto libero
-            magni deleniti quod quam consequuntur! Commodi minima excepturi
-            repudiandae velit hic maxime doloremque. Quaerat provident commodi
-            consectetur veniam similique ad earum omnis ipsum saepe, voluptas,
-            hic voluptates pariatur est explicabo fugiat, dolorum eligendi quam
-            cupiditate excepturi mollitia maiores labore suscipit quas? Nulla,
-            placeat. Voluptatem quaerat non architecto ab laudantium modi minima
-            sunt esse temporibus sint culpa, recusandae aliquam numquam totam
-            ratione voluptas quod exercitationem fuga. Possimus quis earum
-            veniam quasi aliquam eligendi, placeat qui corporis!
+            <div className="container kawindu-reviews">
+              <h1 className="header-title">Recommendations</h1>
+              <Swipr />
+            </div>
+
+            <div className="container kawindu-skill">
+              <h1 className="header-title">Skill</h1>
+              <Skill />
+            </div>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

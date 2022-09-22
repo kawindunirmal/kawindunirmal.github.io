@@ -14,6 +14,7 @@ class Portfolio extends React.Component {
 
   render() {
     const list = [
+      '<a target="_blank" href="https://moviehub.pixelsoft.digital/">MOVIEHUB</a>',
       '<a target="_blank" href="https://www.redoox.com/">REDOOX</a>',
       '<a target="_blank" href="https://ddmlk.com/">DDMLK</a>',
       '<a target="_blank" href="https://www.yfdown.info/">YFDOWN</a>',
@@ -33,7 +34,9 @@ class Portfolio extends React.Component {
             );
           })}
         </div>
-        <button onClick={() => this.handleClick()}>Show more</button>
+        <button className="show-more" onClick={() => this.handleClick()}>
+          Show more
+        </button>
       </>
     );
   }
